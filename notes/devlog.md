@@ -49,4 +49,7 @@ Implementation
 
 ## 2023 Apr 29 Sat
 
-Initial Creation 
+- Initial Creation 
+- Decide to use CubDB for data capture
+
+## 2023 Apr 30 Sun
