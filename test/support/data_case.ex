@@ -1,4 +1,4 @@
-defmodule Driot.DataCase do
+defmodule Datacat.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule Driot.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use Driot.DataCase, async: true`, although
+  by setting `use Datacat.DataCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -18,17 +18,17 @@ defmodule Driot.DataCase do
 
   using do
     quote do
-      alias Driot.Repo
+      alias Datacat.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Driot.DataCase
+      import Datacat.DataCase
     end
   end
 
   setup tags do
-    Driot.DataCase.setup_sandbox(tags)
+    Datacat.DataCase.setup_sandbox(tags)
     :ok
   end
 
@@ -36,7 +36,7 @@ defmodule Driot.DataCase do
   Sets up the sandbox based on the test tags.
   """
   def setup_sandbox(tags) do
-    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(Driot.Repo, shared: not tags[:async])
+    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(Datacat.Repo, shared: not tags[:async])
     on_exit(fn -> Ecto.Adapters.SQL.Sandbox.stop_owner(pid) end)
   end
 

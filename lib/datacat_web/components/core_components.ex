@@ -1,4 +1,4 @@
-defmodule DriotWeb.CoreComponents do
+defmodule DatacatWeb.CoreComponents do
   @moduledoc """
   Provides core UI components.
 
@@ -17,7 +17,7 @@ defmodule DriotWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import DriotWeb.Gettext
+  import DatacatWeb.Gettext
 
   @doc """
   Renders a modal.
@@ -625,9 +625,9 @@ defmodule DriotWeb.CoreComponents do
     # with our gettext backend as first argument. Translations are
     # available in the errors.po file (as we use the "errors" domain).
     if count = opts[:count] do
-      Gettext.dngettext(DriotWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(DatacatWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(DriotWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(DatacatWeb.Gettext, "errors", msg, opts)
     end
   end
 

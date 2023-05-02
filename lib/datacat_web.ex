@@ -1,12 +1,12 @@
-defmodule DriotWeb do
+defmodule DatacatWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use DriotWeb, :controller
-      use DriotWeb, :html
+      use DatacatWeb, :controller
+      use DatacatWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -40,10 +40,10 @@ defmodule DriotWeb do
     quote do
       use Phoenix.Controller,
         formats: [:html, :json],
-        layouts: [html: DriotWeb.Layouts]
+        layouts: [html: DatacatWeb.Layouts]
 
       import Plug.Conn
-      import DriotWeb.Gettext
+      import DatacatWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -52,7 +52,7 @@ defmodule DriotWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {DriotWeb.Layouts, :app}
+        layout: {DatacatWeb.Layouts, :app}
 
       unquote(html_helpers())
     end
@@ -84,8 +84,8 @@ defmodule DriotWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
-      import DriotWeb.CoreComponents
-      import DriotWeb.Gettext
+      import DatacatWeb.CoreComponents
+      import DatacatWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
@@ -98,9 +98,9 @@ defmodule DriotWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: DriotWeb.Endpoint,
-        router: DriotWeb.Router,
-        statics: DriotWeb.static_paths()
+        endpoint: DatacatWeb.Endpoint,
+        router: DatacatWeb.Router,
+        statics: DatacatWeb.static_paths()
     end
   end
 

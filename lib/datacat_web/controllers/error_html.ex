@@ -1,12 +1,12 @@
-defmodule DriotWeb.ErrorHTML do
-  use DriotWeb, :html
+defmodule DatacatWeb.ErrorHTML do
+  use DatacatWeb, :html
 
   # If you want to customize your error pages,
   # uncomment the embed_templates/1 call below
   # and add pages to the error directory:
   #
-  #   * lib/driot_web/controllers/error_html/404.html.heex
-  #   * lib/driot_web/controllers/error_html/500.html.heex
+  #   * lib/datacat_web/controllers/error_html/404.html.heex
+  #   * lib/datacat_web/controllers/error_html/500.html.heex
   #
   # embed_templates "error_html/*"
 

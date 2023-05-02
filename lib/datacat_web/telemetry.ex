@@ -1,4 +1,4 @@
-defmodule DriotWeb.Telemetry do
+defmodule DatacatWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -52,23 +52,23 @@ defmodule DriotWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("driot.repo.query.total_time",
+      summary("datacat.repo.query.total_time",
         unit: {:native, :millisecond},
         description: "The sum of the other measurements"
       ),
-      summary("driot.repo.query.decode_time",
+      summary("datacat.repo.query.decode_time",
         unit: {:native, :millisecond},
         description: "The time spent decoding the data received from the database"
       ),
-      summary("driot.repo.query.query_time",
+      summary("datacat.repo.query.query_time",
         unit: {:native, :millisecond},
         description: "The time spent executing the query"
       ),
-      summary("driot.repo.query.queue_time",
+      summary("datacat.repo.query.queue_time",
         unit: {:native, :millisecond},
         description: "The time spent waiting for a database connection"
       ),
-      summary("driot.repo.query.idle_time",
+      summary("datacat.repo.query.idle_time",
         unit: {:native, :millisecond},
         description:
           "The time the connection spent waiting before being checked out for the query"
@@ -86,7 +86,7 @@ defmodule DriotWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {DriotWeb, :count_users, []}
+      # {DatacatWeb, :count_users, []}
     ]
   end
 end

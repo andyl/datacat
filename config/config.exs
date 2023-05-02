@@ -7,17 +7,17 @@
 # General application configuration
 import Config
 
-config :driot,
-  ecto_repos: [Driot.Repo]
+config :datacat,
+  ecto_repos: [Datacat.Repo]
 
 # Configures the endpoint
-config :driot, DriotWeb.Endpoint,
+config :datacat, DatacatWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [html: DriotWeb.ErrorHTML, json: DriotWeb.ErrorJSON],
+    formats: [html: DatacatWeb.ErrorHTML, json: DatacatWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: Driot.PubSub,
+  pubsub_server: Datacat.PubSub,
   live_view: [signing_salt: "PyRoqjU7"]
 
 # Configures the mailer
@@ -27,7 +27,7 @@ config :driot, DriotWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :driot, Driot.Mailer, adapter: Swoosh.Adapters.Local
+config :datacat, Datacat.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,

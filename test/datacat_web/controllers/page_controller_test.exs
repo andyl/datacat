@@ -1,5 +1,5 @@
-defmodule DriotWeb.PageControllerTest do
-  use DriotWeb.ConnCase
+defmodule DatacatWeb.PageControllerTest do
+  use DatacatWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

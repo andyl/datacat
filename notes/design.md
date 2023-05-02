@@ -1,4 +1,4 @@
-# Driot Design 
+# Datacat Design 
 
 ## Home and Vehicle Data Collection 
 
@@ -60,7 +60,7 @@ Operations:
 - exec 
 - alert 
 
-Operations: a standalone repo, upstream of Driot and Jobex 
+Operations: a standalone repo, upstream of Datacat and Jobex 
 - defined in yaml - like ansible 
 - 
 

@@ -1,5 +1,5 @@
-defmodule DriotWeb.PageController do
-  use DriotWeb, :controller
+defmodule DatacatWeb.PageController do
+  use DatacatWeb, :controller
 
   def home(conn, _params) do
     # The home page is often custom made,

@@ -1,12 +1,12 @@
-defmodule DriotWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :driot
+defmodule DatacatWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :datacat
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_driot_key",
+    key: "_datacat_key",
     signing_salt: "vGvC1xJn",
     same_site: "Lax"
   ]
@@ -19,9 +19,9 @@ defmodule DriotWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :driot,
+    from: :datacat,
     gzip: false,
-    only: DriotWeb.static_paths()
+    only: DatacatWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -29,7 +29,7 @@ defmodule DriotWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :driot
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :datacat
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -47,5 +47,5 @@ defmodule DriotWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug DriotWeb.Router
+  plug DatacatWeb.Router
 end
