@@ -34,4 +34,42 @@ Sensors
 - User 
 - Source 
 - SourceType 
+- Repo
 
+Repo Fields:
+- schema 
+- name 
+- type 
+- owner 
+- encryption 
+- public key 
+
+Repo Types: 
+- CubDB 
+- CSV 
+- JSON 
+- ndJSON 
+- Parquet 
+- Sqlite 
+- Duckdb 
+
+Operations: 
+- move / copy / rename 
+- transform 
+- bash 
+- exec 
+- alert 
+
+Operations: a standalone repo, upstream of Driot and Jobex 
+- defined in yaml - like ansible 
+- 
+
+Repos are: 
+- portable
+- single-file or single-directory 
+
+Repo access: 
+- local file path  
+- s3 
+- http url 
+- ftp url 
