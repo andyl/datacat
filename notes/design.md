@@ -20,6 +20,10 @@ Sensors
 - Audio Signals
 - RF Signals 
 
+Data 
+- Log files 
+- Metrics
+
 ## Architecture 
 
 - Base: Phoenix / Ash / Postgresql / CubDB

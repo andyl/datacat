@@ -2,24 +2,11 @@
 
 ## Backlog 
 
-Song 
-- [ ] Install in House 
-- [ ] Upgrade 
-- [ ] Install ZeroTier 
-- [ ] Auto boot on poweron 
-- [ ] Install in Van 
-
 Ash Learning 
-- [ ] Study ash_phoenix 
-- [ ] Study ash_authentication 
-- [ ] Study ash_authorization 
-- [ ] Study ash_admin 
-
-Explorer Learning 
-- [ ] Study Apache Arrow 
-- [ ] Study Apache Parquet 
-- [ ] Study Elixir libs for Arrow and Parquet 
-- [ ] Study Explorer 
+- [ ] Build ash_phoenix 
+- [ ] Build ash_authentication 
+- [ ] Build ash_authorization 
+- [ ] Build ash_admin 
 
 Ash Development 
 - [ ] Build app 
@@ -28,6 +15,12 @@ Ash Development
 - [ ] Create livebook 
 - [ ] Create JsonApi and GraphQL Api 
 - [ ] Create Swagger doc and GraphQL Sandbox 
+
+Song 
+- [ ] Get 12V power plug 
+- [ ] Install new bios 
+- [ ] Auto boot on poweron 
+- [ ] Install in Van 
 
 Explorer Development 
 - [ ] Implement Context for Explorer 
@@ -53,3 +46,16 @@ Implementation
 - Decide to use CubDB for data capture
 
 ## 2023 Apr 30 Sun
+
+Explorer Learning 
+- [x] Study Apache Arrow 
+- [x] Study Apache Parquet 
+- [x] Study Elixir libs for Arrow and Parquet 
+- [x] Study Explorer 
+
+## 2023 May 02 Tue
+
+Song 
+- [x] Install in House 
+- [x] Upgrade 
+- [x] Install ZeroTier 
