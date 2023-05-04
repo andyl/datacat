@@ -63,6 +63,7 @@ Song
 
 Ash Learning 
 - [x] Fix ash formatting 
-- [ ] Configure ash_admin 
-- [ ] Follow ash tutorials: basics, postgres, phoenix, authentication, build out models 
+- [x] Configure ash_admin 
+- [ ] Follow ash tutorials: authentication 
+- [ ] Build out resources 
 
