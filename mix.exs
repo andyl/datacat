@@ -32,6 +32,7 @@ defmodule Datacat.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      # ----- phoenix
       {:phoenix, "~> 1.7.2"},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.6"},
@@ -41,10 +42,12 @@ defmodule Datacat.MixProject do
       {:phoenix_live_view, "~> 0.18.16"},
       {:floki, ">= 0.30.0", only: :test},
       {:phoenix_live_dashboard, "~> 0.7.2"},
+      # ----- assets
       {:esbuild, "~> 0.7", runtime: Mix.env() == :dev},
       {:tailwind, "~> 0.2.0", runtime: Mix.env() == :dev},
       {:swoosh, "~> 1.3"},
       {:finch, "~> 0.13"},
+      # ----- telemetry
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.20"},
@@ -54,6 +57,8 @@ defmodule Datacat.MixProject do
       {:ash, "~> 2.9"},
       {:ash_postgres, "~> 1.3"},
       {:ash_authentication, "~> 3.10"},
+      {:ash_admin, "~> 0.8"},
+      {:ash_phoenix, "~> 1.2"},
       # ----- database
       {:uniq, "~> 0.5"}
     ]

@@ -1,4 +1,4 @@
-defmodule Datacat.Afm.Support.Registry do
+defmodule Datacat.Afm.Support.AfmRegistry do
   use Ash.Registry
 
   entries do

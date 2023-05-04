@@ -1,5 +1,4 @@
 defmodule Datacat.Afm.Support.Representative do
-
   use Ash.Resource, data_layer: AshPostgres.DataLayer
 
   postgres do

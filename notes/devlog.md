@@ -2,10 +2,6 @@
 
 ## Backlog 
 
-Ash Learning 
-- [ ] Follow ash tutorials: basics, postgres, phoenix, authentication, build out models 
-- [ ] Build ash_admin 
-
 Ash Development 
 - [ ] Build app 
 - [ ] Install auth and access control  
@@ -57,3 +53,16 @@ Song
 - [x] Install in House 
 - [x] Upgrade 
 - [x] Install ZeroTier 
+
+## 2023 May 03 Wed 
+
+- [x] create first Ash resources 
+- [x] basic, postgres, phoenix 
+
+## 2023 May 04 Thu
+
+Ash Learning 
+- [x] Fix ash formatting 
+- [ ] Configure ash_admin 
+- [ ] Follow ash tutorials: basics, postgres, phoenix, authentication, build out models 
+

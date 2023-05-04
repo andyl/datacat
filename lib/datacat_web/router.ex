@@ -1,6 +1,8 @@
 defmodule DatacatWeb.Router do
   use DatacatWeb, :router
 
+  import AshAdmin.Router
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -14,10 +16,12 @@ defmodule DatacatWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", DatacatWeb do
+  scope "/" do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", DatacatWeb.PageController, :home
+
+    ash_admin "/admin"
   end
 
   # Other scopes may use custom stacks.
