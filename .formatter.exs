@@ -1,11 +1,11 @@
 [
   import_deps: [
+    :ash,
+    :ash_authentication,
+    :ash_postgres,
     :ecto,
     :ecto_sql,
     :phoenix,
-    :ash,
-    :ash_postgres,
-    :ash_authentication,
   ],
   subdirectories: ["priv/*/migrations"],
   plugins: [Phoenix.LiveView.HTMLFormatter],

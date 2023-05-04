@@ -35,32 +35,34 @@ defmodule Datacat.MixProject do
       # ----- phoenix
       {:phoenix, "~> 1.7.2"},
       {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.6"},
-      {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 3.3"},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.18.16"},
-      {:floki, ">= 0.30.0", only: :test},
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_dashboard, "~> 0.7.2"},
+      {:plug_cowboy, "~> 2.5"},
       # ----- assets
       {:esbuild, "~> 0.7", runtime: Mix.env() == :dev},
       {:tailwind, "~> 0.2.0", runtime: Mix.env() == :dev},
-      {:swoosh, "~> 1.3"},
+      # ----- util
       {:finch, "~> 0.13"},
-      # ----- telemetry
-      {:telemetry_metrics, "~> 0.6"},
-      {:telemetry_poller, "~> 1.0"},
-      {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"},
+      {:swoosh, "~> 1.3"},
+      {:gettext, "~> 0.20"},
+      # ----- test
+      {:floki, ">= 0.30.0", only: :test},
+      # ----- telemetry
+      {:telemetry_poller, "~> 1.0"},
+      {:telemetry_metrics, "~> 0.6"},
       # ------ ash
       {:ash, "~> 2.9"},
-      {:ash_postgres, "~> 1.3"},
-      {:ash_authentication, "~> 3.10"},
       {:ash_admin, "~> 0.8"},
       {:ash_phoenix, "~> 1.2"},
+      {:ash_postgres, "~> 1.3"},
+      {:ash_authentication, "~> 3.10"},
       # ----- database
-      {:uniq, "~> 0.5"}
+      {:uniq, "~> 0.5"},
+      {:ecto_sql, "~> 3.6"},
+      {:postgrex, ">= 0.0.0"},
     ]
   end
 
