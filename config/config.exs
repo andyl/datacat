@@ -29,6 +29,11 @@ config :datacat, DatacatWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :datacat, Datacat.Mailer, adapter: Swoosh.Adapters.Local
 
+# ash framework
+config :ash, :use_all_identities_in_manage_relationship?, false
+
+config :datacat, :ash_apis, [Datacat.Afm.Support]
+
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.17.11",

@@ -3,9 +3,7 @@
 ## Backlog 
 
 Ash Learning 
-- [ ] Build ash_phoenix 
-- [ ] Build ash_authentication 
-- [ ] Build ash_authorization 
+- [ ] Follow ash tutorials: basics, postgres, phoenix, authentication, build out models 
 - [ ] Build ash_admin 
 
 Ash Development 

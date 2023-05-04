@@ -33,6 +33,33 @@ Data
 - Data access via Explorer 
 - Export from CubDB to InfluxDB periodically 
 
+## FS Layout 
+
+Recommendation 
+
+| lib/            | base dir                  |                       |
+| > datacat/      |                           |                       |
+| >> blog/        | bounded context dir       |                       |
+| >>> blog.ex     | "api" for bounded context | Datacat.Blog          |
+| >>> registry.ex | registry                  | Datacat.Blog.Registry |
+| >>> resources/  | resources dir             |                       |
+| >>>> post.ex    | post resource             | Datacat.Blog.Post     |
+
+Modified Ash 
+
+| lib/            | base dir                    |                       |
+| > datacat/      |                             |                       |
+| >> afm          | directory for ash framework |                       |
+| >>> blog.ex     | "api" for bounded context   | Datacat.Blog          |
+| >> blog/        | bounded context dir         |                       |
+| >>> registry.ex | registry                    | Datacat.Blog.Registry |
+| >>> resources/  | resources dir               |                       |
+| >>>> post.ex    | post resource               | Datacat.Blog.Post     |
+
+Decision: 
+- organize Ash assets under the 'afm' (ash framework) namespace
+- use their recommended layouts 
+
 ## Data Model 
 
 - User 
