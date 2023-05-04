@@ -1,6 +1,11 @@
 defmodule Datacat.Afm.Support.Representative do
 
-  use Ash.Resource, data_layer: Ash.DataLayer.Ets
+  use Ash.Resource, data_layer: AshPostgres.DataLayer
+
+  postgres do
+    table "representatives"
+    repo Datacat.Repo
+  end
 
   actions do
     defaults [:create, :read, :update, :destroy]

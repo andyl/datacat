@@ -1,14 +1,4 @@
-# This file is responsible for configuring your application
-# and its dependencies with the aid of the Config module.
-#
-# This configuration file is loaded before any dependency and
-# is restricted to this project.
-
-# General application configuration
 import Config
-
-config :datacat,
-  ecto_repos: [Datacat.Repo]
 
 # Configures the endpoint
 config :datacat, DatacatWeb.Endpoint,
@@ -29,12 +19,14 @@ config :datacat, DatacatWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :datacat, Datacat.Mailer, adapter: Swoosh.Adapters.Local
 
-# ash framework
+# ----- ash framework, resources and database
+
 config :ash, :use_all_identities_in_manage_relationship?, false
-
 config :datacat, :ash_apis, [Datacat.Afm.Support]
+config :datacat, ecto_repos: [Datacat.Repo]
 
-# Configure esbuild (the version is required)
+# ----- assets
+
 config :esbuild,
   version: "0.17.11",
   default: [
@@ -44,7 +36,6 @@ config :esbuild,
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]
 
-# Configure tailwind (the version is required)
 config :tailwind,
   version: "3.2.7",
   default: [

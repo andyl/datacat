@@ -11,23 +11,13 @@
       "type": "uuid"
     },
     {
-      "allow_nil?": false,
+      "allow_nil?": true,
       "default": "nil",
       "generated?": false,
       "primary_key?": false,
       "references": null,
       "size": null,
-      "source": "subject",
-      "type": "text"
-    },
-    {
-      "allow_nil?": false,
-      "default": "\"open\"",
-      "generated?": false,
-      "primary_key?": false,
-      "references": null,
-      "size": null,
-      "source": "status",
+      "source": "name",
       "type": "text"
     }
   ],
@@ -36,7 +26,7 @@
   "custom_indexes": [],
   "custom_statements": [],
   "has_create_action": true,
-  "hash": "9C730FCE71FAF7B0E3D71FB014C5136DFA6C4D4DE2486BFEACB922FFDFD078DC",
+  "hash": "ACB5297A973CAA2127E01CF48B192B804A04150FC33840676DE3725BF9C97CE2",
   "identities": [],
   "multitenancy": {
     "attribute": null,
@@ -45,5 +35,5 @@
   },
   "repo": "Elixir.Datacat.Repo",
   "schema": null,
-  "table": "tickets"
+  "table": "representatives"
 }
