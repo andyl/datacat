@@ -16,6 +16,8 @@ defmodule Datacat.Application do
       {Phoenix.PubSub, name: Datacat.PubSub},
       # Start Finch
       {Finch, name: Datacat.Finch},
+      # Start the auth supervisor
+      {AshAuthentication.Supervisor, otp_app: :datacat},
       # Start the Endpoint (http/https)
       DatacatWeb.Endpoint
       # Start a worker by calling: Datacat.Worker.start_link(arg)

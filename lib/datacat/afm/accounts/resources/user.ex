@@ -4,7 +4,7 @@ defmodule Datacat.Afm.Accounts.User do
     extensions: [AshAuthentication]
 
   attributes do
-    uuid_primary_key :id, do: default &Uniq.UUID.uuid7/0
+    uuid_primary_key :id, do: default(&Uniq.UUID.uuid7/0)
     attribute :email, :ci_string, allow_nil?: false
     attribute :hashed_password, :string, allow_nil?: false, sensitive?: true
   end
@@ -15,14 +15,17 @@ defmodule Datacat.Afm.Accounts.User do
     strategies do
       password :password do
         identity_field :email
+        sign_in_tokens_enabled? true
       end
     end
 
     tokens do
       enabled? true
       token_resource Datacat.Afm.Accounts.Token
+
       signing_secret fn _, _ ->
-        Application.fetch_env(:my_app, :token_signing_secret)
+        # Application.fetch_env(:datacat, :secret_key_base)
+        {:ok, "adfeijfeslsjfksjalfeij1234asdf2345asdf1234"}
       end
     end
   end

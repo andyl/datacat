@@ -1,6 +1,8 @@
 defmodule DatacatWeb.Router do
   use DatacatWeb, :router
 
+  use AshAuthentication.Phoenix.Router
+
   import AshAdmin.Router
 
   pipeline :browser do
@@ -10,16 +12,23 @@ defmodule DatacatWeb.Router do
     plug :put_root_layout, {DatacatWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug :load_from_session
   end
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug :load_from_bearer
   end
 
   scope "/" do
     pipe_through :browser
 
     get "/", DatacatWeb.PageController, :home
+
+    sign_in_route()
+    sign_out_route DatacatWeb.AuthController
+    auth_routes_for Datacat.Afm.Accounts.User, to: DatacatWeb.AuthController
+    reset_route []
 
     ash_admin "/admin"
   end

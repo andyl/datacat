@@ -22,7 +22,7 @@ config :datacat, Datacat.Mailer, adapter: Swoosh.Adapters.Local
 # ----- ash framework, resources and database
 
 config :ash, :use_all_identities_in_manage_relationship?, false
-config :datacat, :ash_apis, [Datacat.Afm.Support]
+config :datacat, :ash_apis, [Datacat.Afm.Support, Datacat.Afm.Accounts]
 config :datacat, ecto_repos: [Datacat.Repo]
 
 # ----- assets

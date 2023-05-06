@@ -59,6 +59,7 @@ defmodule Datacat.MixProject do
       {:ash_phoenix, "~> 1.2"},
       {:ash_postgres, "~> 1.3"},
       {:ash_authentication, "~> 3.10"},
+      {:ash_authentication_phoenix, "~> 1.7"},
       # ----- database
       {:uniq, "~> 0.5"},
       {:ecto_sql, "~> 3.6"},

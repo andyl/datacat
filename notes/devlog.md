@@ -64,6 +64,27 @@ Song
 Ash Learning 
 - [x] Fix ash formatting 
 - [x] Configure ash_admin 
-- [ ] Follow ash tutorials: authentication 
-- [ ] Build out resources 
+- [x] Follow ash tutorials: authentication 
+
+Progression 
+- [ ] Ash 
+- [ ] Ash-Postgres 
+- [ ] Ash-Phoenix
+- [ ] Ash-Admin 
+- [ ] Ash-Authentication 
+
+Recap 
+- There is a ton to learn 
+- Ash is not productive without generators 
+- Doesn't feel solid 
+- Not ready for production app
+- Discord has improved a lot 
+
+Next step 
+- [ ] Work on generators(?)
+- [ ] Forget about ASH until they provide generators 
+- [ ] Keep watching the videos and reading the docs 
+- [ ] Read the discord every day 
+- [ ] See how things pan out over time
+
 
