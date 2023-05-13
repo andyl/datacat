@@ -64,6 +64,8 @@ defmodule Datacat.MixProject do
       {:uniq, "~> 0.5"},
       {:ecto_sql, "~> 3.6"},
       {:postgrex, ">= 0.0.0"},
+      # ----- mix tasks
+      {:ash_gen, path: "~/src/mixtasks/ash_gen"},
     ]
   end
 
